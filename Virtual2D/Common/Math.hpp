@@ -13,6 +13,11 @@
 #include <math.h>
 #include <settings.hpp>
 
+inline bool FloatIsValid(float32 x)
+{
+    return isfinite(x);
+}
+
 struct vec2 {
     float32 x, y;
     
@@ -62,6 +67,11 @@ struct vec2 {
     {
         x /= i; y /= i;
     }
+    
+    bool IsValid()
+    {
+        return FloatIsValid(x) && FloatIsValid(y);
+    }
 };
 
 struct vec3 {
@@ -106,6 +116,11 @@ struct vec3 {
     void operator /= (const float32 i)
     {
         x /= i; y /= i; z /= i;
+    }
+    
+    bool IsValid()
+    {
+        return FloatIsValid(x) && FloatIsValid(y) && FloatIsValid(z);
     }
 };
 
