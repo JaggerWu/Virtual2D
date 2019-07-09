@@ -10,6 +10,8 @@
 #include "Virtual2D.hpp"
 #include "Virtual2DPriv.hpp"
 
+#include "Common/settings.hpp"
+
 using namespace std;
 
 void Virtual2D::HelloWorld(const char * s)

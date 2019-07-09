@@ -14,9 +14,17 @@
 #include <settings.hpp>
 
 struct vec2 {
+    float32 x, y;
+    
+    /// Constructor with nothing
     vec2() {}
     
-    float32 x, y;
+    /// Constructor with init x, y value. Equivalent to
+    /// vec2(float32 xInit, float32 yInit)
+    /// {
+    ///    x = xInit; y = yInit;
+    /// }
+    vec2(float32 xInit, float32 yInit): x(xInit), y(yInit) {}
     
     void SetZero()
     {
@@ -54,14 +62,14 @@ struct vec2 {
     {
         x /= i; y /= i;
     }
-    
-    
 };
 
 struct vec3 {
+    float32 x, y, z;
+    
     vec3() {}
     
-    float32 x, y, z;
+    vec3(float32 xInit, float32 yInit, float32 zInit): x(xInit), y(yInit), z(zInit) {}
     
     void SetZero()
     {
@@ -100,5 +108,30 @@ struct vec3 {
         x /= i; y /= i; z /= i;
     }
 };
+
+inline vec2 operator + (const vec2& a, const vec2& b)
+{
+    return vec2(a.x + b.x, a.y + b.y);
+}
+
+inline vec2 operator - (const vec2& a, const vec2& b)
+{
+    return vec2(a.x - b.x, a.y - b.y);
+}
+
+inline bool operator == (const vec2& a, const vec2& b)
+{
+    return (a.x == b.x && a.y == b.y);
+}
+
+inline float32 vecDot(const vec2& a, const vec2& b)
+{
+    return a.x * b.x + a.y * b.y;
+}
+
+inline float32 vecDot(const vec3& a, const vec3& b)
+{
+    return a.x * b.x + a.y * b.y + a.z * b.z;
+}
 
 #endif /* Math_hpp */
