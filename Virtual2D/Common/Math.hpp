@@ -20,14 +20,12 @@ struct vec2 {
     
     void SetZero()
     {
-        x = 0.0f;
-        y = 0.0f;
+        x = 0.0f; y = 0.0f;
     }
     
     void Set(float32 x_, float32 y_)
     {
-        x = x_;
-        y = y_;
+        x = x_; y = y_;
     }
     
     vec2 operator -() const
