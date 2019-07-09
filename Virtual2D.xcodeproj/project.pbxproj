@@ -10,6 +10,10 @@
 		9B57268622D4F46900CD3A6C /* Virtual2D.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9B57268522D4F46900CD3A6C /* Virtual2D.hpp */; };
 		9B57268822D4F46900CD3A6C /* Virtual2DPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9B57268722D4F46900CD3A6C /* Virtual2DPriv.hpp */; };
 		9B57268A22D4F46900CD3A6C /* Virtual2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B57268922D4F46900CD3A6C /* Virtual2D.cpp */; };
+		9B57269322D5174900CD3A6C /* Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B57269122D5174900CD3A6C /* Math.cpp */; };
+		9B57269422D5174900CD3A6C /* Math.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9B57269222D5174900CD3A6C /* Math.hpp */; };
+		9B57269722D519BD00CD3A6C /* settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B57269522D519BD00CD3A6C /* settings.cpp */; };
+		9B57269822D519BD00CD3A6C /* settings.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9B57269622D519BD00CD3A6C /* settings.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +21,10 @@
 		9B57268522D4F46900CD3A6C /* Virtual2D.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Virtual2D.hpp; sourceTree = "<group>"; };
 		9B57268722D4F46900CD3A6C /* Virtual2DPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Virtual2DPriv.hpp; sourceTree = "<group>"; };
 		9B57268922D4F46900CD3A6C /* Virtual2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Virtual2D.cpp; sourceTree = "<group>"; };
+		9B57269122D5174900CD3A6C /* Math.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Math.cpp; sourceTree = "<group>"; };
+		9B57269222D5174900CD3A6C /* Math.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Math.hpp; sourceTree = "<group>"; };
+		9B57269522D519BD00CD3A6C /* settings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = settings.cpp; sourceTree = "<group>"; };
+		9B57269622D519BD00CD3A6C /* settings.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = settings.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,11 +57,23 @@
 		9B57268422D4F46900CD3A6C /* Virtual2D */ = {
 			isa = PBXGroup;
 			children = (
+				9B57269022D516D500CD3A6C /* Common */,
 				9B57268522D4F46900CD3A6C /* Virtual2D.hpp */,
 				9B57268722D4F46900CD3A6C /* Virtual2DPriv.hpp */,
 				9B57268922D4F46900CD3A6C /* Virtual2D.cpp */,
 			);
 			path = Virtual2D;
+			sourceTree = "<group>";
+		};
+		9B57269022D516D500CD3A6C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9B57269122D5174900CD3A6C /* Math.cpp */,
+				9B57269222D5174900CD3A6C /* Math.hpp */,
+				9B57269522D519BD00CD3A6C /* settings.cpp */,
+				9B57269622D519BD00CD3A6C /* settings.hpp */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -64,7 +84,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B57268622D4F46900CD3A6C /* Virtual2D.hpp in Headers */,
+				9B57269422D5174900CD3A6C /* Math.hpp in Headers */,
 				9B57268822D4F46900CD3A6C /* Virtual2DPriv.hpp in Headers */,
+				9B57269822D519BD00CD3A6C /* settings.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B57269722D519BD00CD3A6C /* settings.cpp in Sources */,
 				9B57268A22D4F46900CD3A6C /* Virtual2D.cpp in Sources */,
+				9B57269322D5174900CD3A6C /* Math.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

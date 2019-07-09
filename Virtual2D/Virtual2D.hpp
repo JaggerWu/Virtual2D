@@ -15,7 +15,7 @@
 class Virtual2D
 {
     public:
-    void HelloWorld(const char *);
+        void HelloWorld(const char *);
 };
 
 #pragma GCC visibility pop

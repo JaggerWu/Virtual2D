@@ -10,6 +10,8 @@
 #include "Virtual2D.hpp"
 #include "Virtual2DPriv.hpp"
 
+using namespace std;
+
 void Virtual2D::HelloWorld(const char * s)
 {
     Virtual2DPriv *theObj = new Virtual2DPriv;
@@ -19,6 +21,6 @@ void Virtual2D::HelloWorld(const char * s)
 
 void Virtual2DPriv::HelloWorldPriv(const char * s) 
 {
-    std::cout << s << std::endl;
+    cout << s << endl;
 };
 
