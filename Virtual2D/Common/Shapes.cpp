@@ -13,6 +13,10 @@ namespace Vir2D {
     namespace Common {
         namespace Shapes {
             
+            bool IsCollision(const Circle& c1, const Circle& c2)
+            {
+                return true;
+            };
         }
     }
 }

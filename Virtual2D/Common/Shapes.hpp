@@ -21,10 +21,14 @@ namespace Vir2D {
     namespace Common {
         namespace Shapes {
             
-            struct Circle
+            struct BaseShape
+            {
+                vec2 position;
+            };
+            
+            struct Circle: BaseShape
             {
                 float32 radius;
-                vec2 position;
                 
                 Circle() {}
                 
