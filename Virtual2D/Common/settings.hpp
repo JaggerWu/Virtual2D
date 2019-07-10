@@ -11,7 +11,13 @@
 
 #include <stdio.h>
 
-typedef float float32;
-typedef double float64;
+namespace Vir2D {
+    namespace Common {
+        namespace Settings {
+            typedef float float32;
+            typedef double float64;
+        }
+    }
+}
 
 #endif /* settings_hpp */

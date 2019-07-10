@@ -7,3 +7,11 @@
 //
 
 #include "Math.hpp"
+
+namespace Vir2D {
+    namespace Common {
+        namespace Math {
+            
+        }
+    }
+}
