@@ -11,10 +11,33 @@
 
 #include <stdio.h>
 
+#include "settings.hpp"
+#include "Math.hpp"
+
+using namespace Vir2D::Common::Settings;
+using namespace Vir2D::Common::Math;
+
 namespace Vir2D {
     namespace Common {
         namespace Shapes {
             
+            struct Circle
+            {
+                float32 radius;
+                vec2 position;
+                
+                Circle() {}
+                
+                Circle(const float32& r, const vec2& p)
+                {
+                    radius = r; position = p;
+                }
+                
+                void Move(const float32& dx, const float32& dy)
+                {
+                    position += vec2(dx, dy);
+                }
+            };
         }
     }
 }
