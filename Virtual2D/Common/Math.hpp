@@ -146,6 +146,11 @@ namespace Vir2D {
                     ey = vec2(a21, a22);
                 }
                 
+                mat2(const vec2& r1, const vec2& r2)
+                {
+                    ex = r1; ey = r2;
+                }
+                
                 void Set(const vec2& r1, const vec2& r2)
                 {
                     ex = r1;ey = r2;
@@ -161,6 +166,62 @@ namespace Vir2D {
                 {
                     ex = vec2(0.0f, 0.0f);
                     ey = vec2(0.0f, 0.0f);
+                }
+                
+                mat2 T()
+                {
+                    return mat2(ex.x, ey.x, ex.y, ey.y);
+                }
+            };
+            
+            struct mat3
+            {
+                vec3 ex, ey, ez;
+                
+                mat3() {}
+                
+                mat3(const float32& a11,
+                     const float32& a12,
+                     const float32& a13,
+                     const float32& a21,
+                     const float32& a22,
+                     const float32& a23,
+                     const float32& a31,
+                     const float32& a32,
+                     const float32& a33)
+                {
+                    ex = vec3(a11, a12, a13);
+                    ey = vec3(a21, a22, a23);
+                    ez = vec3(a31, a32, a33);
+                }
+                
+                mat3(const vec3& r1, const vec3& r2, const vec3& r3)
+                {
+                    ex = r1; ey = r2; ez = r3;
+                }
+                
+                void Set(const vec3& r1, const vec3& r2, const vec3& r3)
+                {
+                    ex = r1; ey = r2; ez = r3;
+                }
+                
+                void SetIdentity()
+                {
+                    ex = vec3(1.0f, 0.0f, 0.0f);
+                    ey = vec3(0.0f, 1.0f, 0.0f);
+                    ez = vec3(0.0f, 0.0f, 1.0f);
+                }
+                
+                void SetZero()
+                {
+                    ex = vec3(0.0f, 0.0f, 0.0f);
+                    ey = vec3(0.0f, 0.0f, 0.0f);
+                    ez = vec3(0.0f, 0.0f, 0.0f);
+                }
+                
+                mat3 T()
+                {
+                    return mat3(ex.x, ey.x, ez.x, ex.y, ey.y, ez.y, ex.z, ey.z, ez.z);
                 }
             };
             
