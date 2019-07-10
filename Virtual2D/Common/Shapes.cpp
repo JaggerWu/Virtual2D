@@ -1,16 +1,17 @@
 //
-//  settings.cpp
+//  Shapes.cpp
 //  Virtual2D
 //
-//  Created by Jian Wu on 09/07/2019.
+//  Created by Jian Wu on 10/07/2019.
 //  Copyright © 2019 Jian Wu. All rights reserved.
 //
 
-#include "settings.hpp"
+#include "Shapes.hpp"
+
 
 namespace Vir2D {
     namespace Common {
-        namespace Settings {
+        namespace Shapes {
             
         }
     }
