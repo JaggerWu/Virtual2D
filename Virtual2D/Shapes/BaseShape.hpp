@@ -9,13 +9,12 @@
 #ifndef BaseShape_h
 #define BaseShape_h
 
-#inlude "../Common/Math.hpp"
+#include "/Users/jwu/jwu/Virtual2D/Virtual2D/Common/Math.hpp"
 
-using namespace Vir2D::Common::Math
+using namespace Vir2D::Common::Math;
 
 namespace Vir2D {
     namespace Shapes {
-        
         enum Type
         {
             circle = 0,
@@ -23,17 +22,26 @@ namespace Vir2D {
         
         class BaseShape
         {
-            public:
-                Type GetType() const;
+        public:
+            Type GetType() const;
+        
+            Type type;
+        
+            float32 mass;
             
-                Type type;
+            vec2 position;
             
-                float32
+            vec2 GetPosition();
         };
         
         inline Type BaseShape::GetType() const
         {
             return type;
+        }
+        
+        inline vec2 BaseShape::GetPosition()
+        {
+            return position;
         }
     }
 }

@@ -11,8 +11,10 @@
 #include "Virtual2DPriv.hpp"
 
 #include "Common/settings.hpp"
+#include "Shapes/BaseShape.hpp"
 
 using namespace std;
+using namespace Vir2D::Shapes;
 
 void Virtual2D::HelloWorld(const char * s)
 {
