@@ -12,17 +12,16 @@
 #include <stdio.h>
 
 #include "BaseShape.hpp"
+#include "/Users/jwu/jwu/Virtual2D/Virtual2D/Common/Math.hpp"
+
+using namespace Vir2D::Common::Math;
 
 namespace Vir2D {
     namespace Shapes {
         class Circle: BaseShape
         {
         public:
-            
-            Circle()
-            {
-                
-            }
+            Circle() {}
             float32 radius;
         };
     }

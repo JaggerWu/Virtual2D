@@ -32,6 +32,8 @@ namespace Vir2D {
             vec2 position;
             
             vec2 GetPosition();
+            
+            void move(vec2& d);
         };
         
         inline Type BaseShape::GetType() const
@@ -42,6 +44,11 @@ namespace Vir2D {
         inline vec2 BaseShape::GetPosition()
         {
             return position;
+        }
+        
+        inline void BaseShape::move(vec2& d)
+        {
+            position += d;
         }
     }
 }
