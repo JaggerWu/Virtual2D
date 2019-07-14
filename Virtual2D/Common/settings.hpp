@@ -10,12 +10,35 @@
 #define settings_hpp
 
 #include <stdio.h>
+#include <stddef.h>
+#include <assert.h>
+#include <float.h>
 
 namespace Vir2D {
     namespace Common {
         namespace Settings {
+            // int
+            typedef signed int int32;
+            
+            // float
             typedef float float32;
             typedef double float64;
+            
+#define pi      3.14159265359f
+            
+            
+            // Logging func
+            void V2Log(const char* string, ...);
+            
+            // Version
+            struct Version
+            {
+                int32 major;
+                int32 minor;
+                int32 reversion;
+            };
+            
+            extern Version currenctVersion;
         }
     }
 }
