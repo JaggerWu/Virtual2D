@@ -50,7 +50,7 @@ namespace Vir2D {
             
             vec2 GetPosition();
             
-            void move(vec2& d);
+            void Move(vec2& d);
             
             virtual int32 GetChildCount() const = 0;
             
@@ -67,7 +67,7 @@ namespace Vir2D {
             return position;
         }
         
-        inline void BaseShape::move(vec2& d)
+        inline void BaseShape::Move(vec2& d)
         {
             position += d;
         }

@@ -23,6 +23,10 @@ namespace Vir2D {
         public:
             Circle() {}
             float32 radius;
+            
+            void ComputeMass(MassData* massData, float32 density) const = 0;
+            
+            int32 GetChildCount() const = 0;
         };
     }
 }
