@@ -15,25 +15,46 @@ using namespace Vir2D::Common::Math;
 
 namespace Vir2D {
     namespace Shapes {
+        
+        /// Shape Types
         enum Type
         {
             circle = 0,
         };
         
+        /// Mass Data Struct
+        struct MassData
+        {
+            /// The mass of the shape, usually in kilograms.
+            float32 mass;
+            
+            /// The position of the shape's centroid relative to the shape's origin.
+            vec2 center;
+            
+            /// The rotational inertia of the shape about the local origin.
+            float32 I;
+        };
+        
         class BaseShape
         {
         public:
+            virtual ~BaseShape() {}
+            
             Type GetType() const;
         
             Type type;
         
-            float32 mass;
+            MassData mass;
             
             vec2 position;
             
             vec2 GetPosition();
             
             void move(vec2& d);
+            
+            virtual int32 GetChildCount() const = 0;
+            
+            virtual void ComputeMass(MassData* massData, float32 density) const = 0;
         };
         
         inline Type BaseShape::GetType() const
