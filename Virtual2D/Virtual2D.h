@@ -6,7 +6,7 @@
 //  Copyright © 2019 Jian Wu. All rights reserved.
 //
 
-#ifndef Header_h
-#define Header_h
+#ifndef Virtual2D_h
+#define Virtual2D_h
 
-#endif /* Header_h */
+#endif /* Virtual2D_h */
