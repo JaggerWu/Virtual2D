@@ -24,6 +24,9 @@ namespace Vir2D {
             typedef float float32;
             typedef double float64;
             
+            // unit
+            typedef unsigned char unit8;
+            
 #define pi      3.14159265359f
             
             
