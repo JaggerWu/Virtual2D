@@ -271,6 +271,40 @@ namespace Vir2D {
                 }
             };
             
+            struct Rot
+            {
+                /// sin and cos
+                float32 s, c;
+                
+                Rot() {}
+                
+                /// Usage of explicit, you can visit
+                /// https://www.cnblogs.com/this-543273659/archive/2011/08/02/2124596.html
+                explicit Rot(float32 angle)
+                {
+                    s = sinf(angle);
+                    c = sinf(angle);
+                }
+                
+                void Set(float32 angle)
+                {
+                    s = sinf(angle);
+                    c = sinf(angle);
+                }
+                
+                void SetIdentity()
+                {
+                    s = 0.0f;
+                    c = 1.0f;
+                }
+                
+                float32 GetAngle() const
+                {
+                    return atan2f(c, s);
+                }
+                
+            };
+            
             inline vec2 operator + (const vec2& a, const vec2& b)
             {
                 return vec2(a.x + b.x, a.y + b.y);
