@@ -79,6 +79,29 @@ namespace Vir2D {
                 {
                     return FloatIsValid(x) && FloatIsValid(y);
                 }
+                
+                float32 Length() const
+                {
+                    return sqrt(x * x + y * y);
+                }
+                
+                float32 Normalize()
+                {
+                    float32 length = Length();
+                    if (length < FLT_EPSILON)
+                    {
+                        return 0.0f;
+                    }
+                    x /= length;
+                    y /= length;
+                    
+                    return  length;
+                }
+                
+                vec2 Skew() const
+                {
+                    return vec2(-y, x);
+                }
             };
             
             struct vec3 {
@@ -129,6 +152,25 @@ namespace Vir2D {
                 {
                     return FloatIsValid(x) && FloatIsValid(y) && FloatIsValid(z);
                 }
+                
+                float32 Length() const
+                {
+                    return sqrt(x * x + y * y + z * z);
+                }
+                
+                float32 Normalize()
+                {
+                    float32 length = Length();
+                    if (length < FLT_EPSILON)
+                    {
+                        return 0.0f;
+                    }
+                    x /= length;
+                    y /= length;
+                    z /= length;
+                    
+                    return  length;
+                }
             };
             
             struct mat2
@@ -172,6 +214,10 @@ namespace Vir2D {
                 {
                     return mat2(ex.x, ey.x, ex.y, ey.y);
                 }
+                
+                mat2 GetInverse() const;
+                
+                vec2 Solve(const vec2& b) const;
             };
             
             struct mat3

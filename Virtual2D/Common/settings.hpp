@@ -17,6 +17,9 @@
 namespace Vir2D {
     namespace Common {
         namespace Settings {
+
+#define    pi            3.14159265359f
+            
             // int
             typedef signed int int32;
             
@@ -26,8 +29,6 @@ namespace Vir2D {
             
             // unit
             typedef unsigned char unit8;
-            
-#define pi      3.14159265359f
             
             
             // Logging func
