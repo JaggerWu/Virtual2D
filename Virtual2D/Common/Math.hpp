@@ -329,6 +329,17 @@ namespace Vir2D {
             {
                 return a.x * b.x + a.y * b.y + a.z * b.z;
             }
+            
+            template <typename T>
+            inline T v2Abs(T a)
+            {
+                return a > T(0) ? a : -a;
+            }
+            
+            inline vec2 v2Abs(const vec2& a)
+            {
+                return vec2(v2Abs(a.x), v2Abs(a.y));
+            }
         }
     }
 }

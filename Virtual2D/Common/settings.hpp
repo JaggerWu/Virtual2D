@@ -20,21 +20,21 @@ namespace Vir2D {
 
 #define    pi            3.14159265359f
             
-            // int
+            /// int
             typedef signed int int32;
             
-            // float
+            /// float
             typedef float float32;
             typedef double float64;
             
-            // unit
+            /// unit
             typedef unsigned char unit8;
             
             
-            // Logging func
+            /// Logging func
             void V2Log(const char* string, ...);
             
-            // Version
+            /// Version
             struct Version
             {
                 int32 major;
