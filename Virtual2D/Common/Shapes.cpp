@@ -15,7 +15,12 @@ namespace Vir2D {
             
             bool IsCollision(const Circle& c1, const Circle& c2)
             {
-                return true;
+                float32 distance = (c1.position - c2.position).Length();
+                if (distance < c1.radius + c2.radius)
+                {
+                    throw __EXCEPTIONS;
+                }
+                return !(distance > (c1.radius + c2.radius));
             };
         }
     }
