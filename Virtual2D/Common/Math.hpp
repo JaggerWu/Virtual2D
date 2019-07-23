@@ -331,7 +331,7 @@ namespace Vir2D {
             }
             
             template <typename T>
-            inline T v2Abs(T a)
+            inline T v2Abs(T& a)
             {
                 return a > T(0) ? a : -a;
             }
@@ -339,6 +339,41 @@ namespace Vir2D {
             inline vec2 v2Abs(const vec2& a)
             {
                 return vec2(v2Abs(a.x), v2Abs(a.y));
+            }
+            
+            inline mat2 v2Abs(const mat2& A)
+            {
+                return mat2(v2Abs(A.ex), v2Abs(A.ey));
+            }
+            
+            template <typename T>
+            inline T v2Min(const T& a, const T& b)
+            {
+                return a < b ? a : b;
+            }
+            
+            inline vec2 v2Min(const vec2& a, const vec2& b)
+            {
+                return vec2(v2Min(a.x, b.x), v2Min(a.y, b.y));
+            }
+            
+            template <typename T>
+            inline T v2Max(const T& a, const T& b)
+            {
+                return a > b ? a : b;
+            }
+            
+            inline vec2 v2Max(const vec2& a, const vec2& b)
+            {
+                return vec2(v2Max(a.x, b.x), v2Max(a.y, b.y));
+            }
+            
+            template <typename T>
+            inline T Swap(T& a, T& b)
+            {
+                T tmp = a;
+                a = b;
+                b = tmp;
             }
         }
     }
