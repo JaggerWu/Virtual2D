@@ -38,6 +38,9 @@ namespace Vir2D {
         class BaseShape
         {
         public:
+            BaseShape() {}
+
+            /// Efficient Cpp
             virtual ~BaseShape() {}
             
             Type GetType() const;

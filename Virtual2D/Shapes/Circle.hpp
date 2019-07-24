@@ -18,10 +18,13 @@ using namespace Vir2D::Common::Math;
 
 namespace Vir2D {
     namespace Shapes {
-        class Circle: BaseShape
+        class Circle: public BaseShape
         {
         public:
-            Circle() {}
+            Circle(): BaseShape() {}
+            
+            ~Circle() {}
+            
             float32 radius;
             
             void ComputeMass(MassData* massData, float32 density) const = 0;
