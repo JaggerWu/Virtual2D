@@ -13,7 +13,7 @@ namespace Vir2D {
     namespace Common {
         namespace Shapes {
             
-            bool IsCollision(const Circle& c1, const Circle& c2)
+            bool IsCollision(Circle& c1, Circle& c2)
             {
                 float32 distance = (c1.position - c2.position).Length();
                 if (distance < c1.radius + c2.radius)

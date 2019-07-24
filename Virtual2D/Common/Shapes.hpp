@@ -21,20 +21,30 @@ namespace Vir2D {
     namespace Common {
         namespace Shapes {
             
-            struct BaseShape
+            class BaseShape
             {
+            public:
+                BaseShape() {}
+                
+                BaseShape(const vec2& p) {
+                    position = p;
+                }
+                
+                virtual ~BaseShape();
+                
                 vec2 position;
             };
             
-            struct Circle: BaseShape
+            class Circle: public BaseShape
             {
+            public:
                 float32 radius;
                 
                 Circle() {}
                 
-                Circle(const float32& r, const vec2& p)
+                Circle(const float32& r, const vec2& p): BaseShape(p)
                 {
-                    radius = r; position = p;
+                    radius = r;
                 }
                 
                 void Move(const float32& dx, const float32& dy)
