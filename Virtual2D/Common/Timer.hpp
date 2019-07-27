@@ -13,8 +13,11 @@
 
 #include "settings.hpp"
 
+using namespace Vir2D::Common::Settings;
+
 namespace Vir2D {
     namespace Common {
+        
         class Timer
         {
         public:
@@ -23,9 +26,12 @@ namespace Vir2D {
             
             void Reset();
             
+            float32 GetMilliseconds() const;
+            
         private:
-            unsigned long long m_start_sec;
-            unsigned long long m_start_usec;
+            timeval start;
+            
+            float32 difftimeval(timeval *start_t, timeval *end_t) const;
         };
     }
 }
