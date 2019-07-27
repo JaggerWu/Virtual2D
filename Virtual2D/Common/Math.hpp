@@ -173,13 +173,13 @@ namespace Vir2D {
                 }
             };
             
-            struct mat2
+            struct mat22
             {
                 vec2 ex, ey;
                 
-                mat2() {}
+                mat22() {}
                 
-                mat2(const float32& a11,
+                mat22(const float32& a11,
                      const float32& a12,
                      const float32& a21,
                      const float32& a22)
@@ -188,7 +188,7 @@ namespace Vir2D {
                     ey = vec2(a21, a22);
                 }
                 
-                mat2(const vec2& r1, const vec2& r2)
+                mat22(const vec2& r1, const vec2& r2)
                 {
                     ex = r1; ey = r2;
                 }
@@ -210,23 +210,23 @@ namespace Vir2D {
                     ey = vec2(0.0f, 0.0f);
                 }
                 
-                mat2 T()
+                mat22 T()
                 {
-                    return mat2(ex.x, ey.x, ex.y, ey.y);
+                    return mat22(ex.x, ey.x, ex.y, ey.y);
                 }
                 
-                mat2 GetInverse() const;
+                mat22 GetInverse() const;
                 
                 vec2 Solve(const vec2& b) const;
             };
             
-            struct mat3
+            struct mat33
             {
                 vec3 ex, ey, ez;
                 
-                mat3() {}
+                mat33() {}
                 
-                mat3(const float32& a11,
+                mat33(const float32& a11,
                      const float32& a12,
                      const float32& a13,
                      const float32& a21,
@@ -241,7 +241,7 @@ namespace Vir2D {
                     ez = vec3(a31, a32, a33);
                 }
                 
-                mat3(const vec3& r1, const vec3& r2, const vec3& r3)
+                mat33(const vec3& r1, const vec3& r2, const vec3& r3)
                 {
                     ex = r1; ey = r2; ez = r3;
                 }
@@ -265,9 +265,9 @@ namespace Vir2D {
                     ez = vec3(0.0f, 0.0f, 0.0f);
                 }
                 
-                mat3 T()
+                mat33 T()
                 {
-                    return mat3(ex.x, ey.x, ez.x, ex.y, ey.y, ez.y, ex.z, ey.z, ez.z);
+                    return mat33(ex.x, ey.x, ez.x, ex.y, ey.y, ez.y, ex.z, ey.z, ez.z);
                 }
             };
             
@@ -331,41 +331,41 @@ namespace Vir2D {
             }
             
             template <typename T>
-            inline T v2Abs(T& a)
+            inline T vec2Abs(T& a)
             {
                 return a > T(0) ? a : -a;
             }
             
-            inline vec2 v2Abs(const vec2& a)
+            inline vec2 vec2Abs(const vec2& a)
             {
-                return vec2(v2Abs(a.x), v2Abs(a.y));
+                return vec2(vec2Abs(a.x), vec2Abs(a.y));
             }
             
-            inline mat2 v2Abs(const mat2& A)
+            inline mat22 vec2Abs(const mat22& A)
             {
-                return mat2(v2Abs(A.ex), v2Abs(A.ey));
+                return mat22(vec2Abs(A.ex), vec2Abs(A.ey));
             }
             
             template <typename T>
-            inline T v2Min(const T& a, const T& b)
+            inline T vec2Min(const T& a, const T& b)
             {
                 return a < b ? a : b;
             }
             
-            inline vec2 v2Min(const vec2& a, const vec2& b)
+            inline vec2 vec2Min(const vec2& a, const vec2& b)
             {
-                return vec2(v2Min(a.x, b.x), v2Min(a.y, b.y));
+                return vec2(vec2Min(a.x, b.x), vec2Min(a.y, b.y));
             }
             
             template <typename T>
-            inline T v2Max(const T& a, const T& b)
+            inline T vec2Max(const T& a, const T& b)
             {
                 return a > b ? a : b;
             }
             
-            inline vec2 v2Max(const vec2& a, const vec2& b)
+            inline vec2 vec2Max(const vec2& a, const vec2& b)
             {
-                return vec2(v2Max(a.x, b.x), v2Max(a.y, b.y));
+                return vec2(vec2Max(a.x, b.x), vec2Max(a.y, b.y));
             }
             
             template <typename T>

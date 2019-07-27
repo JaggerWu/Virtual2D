@@ -12,7 +12,7 @@ namespace Vir2D {
     namespace Common {
         namespace Math {
             
-            mat2 mat2::GetInverse() const
+            mat22 mat22::GetInverse() const
             {
                 float32 a = ex.x, b = ex.y, c = ey.x, d = ey.y;
                 float32 det = a * d - b * c;
@@ -22,14 +22,14 @@ namespace Vir2D {
                     det = 1.0f / det;
                 }
                 
-                mat2 InverseMat;
+                mat22 InverseMat;
                 InverseMat.Set(vec2(d * det, -b * det), vec2(-c * det, a * det));
                 
                 return InverseMat;
             }
             
             /// Solve A * x = B
-            vec2 mat2::Solve(const vec2& B) const
+            vec2 mat22::Solve(const vec2& B) const
             {
                 float32 a = ex.x, b = ex.y, c = ey.x, d = ey.y;
                 float32 det = a * d - b * c;
